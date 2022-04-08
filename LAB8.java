@@ -12,10 +12,10 @@ public class LAB8 {
 		
 		do {
 			System.out.println("Input your name: ");
-			String name = scan.nextLine();
+			String name = scan.next();
 			
 			System.out.println("What did you purchase? ");
-			String purchase = scan.nextLine();
+			String purchase = scan.next();
 			
 			System.out.println("How much did you pay? (in USD) ");
 			double price = scan.nextDouble();
@@ -25,11 +25,9 @@ public class LAB8 {
 			file.write(str + "\n");
 			
 			System.out.print("Would you like to log another purchase? (y/n) ");
-			redo = scan.nextLine();
-			
-		}
-		
-		while (redo.equalsIgnoreCase("y"));
+			redo = scan.next();
+
+		}while (redo.equalsIgnoreCase("y"));
 		
 		file.close();
 		
